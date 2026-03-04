@@ -38,4 +38,4 @@ SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/bernhard/Applications
+SETUVAR fish_user_paths:/home/bernhard/\x2elocal/bin\x1e/home/bernhard/bin\x1e/home/bernhard/Applications
