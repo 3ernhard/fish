@@ -8,12 +8,8 @@ abbr fdh fd --hidden
 abbr yank wl-copy
 abbr spank wl-paste
 
-if type -q vimx
-    abbr vi vimx
-    abbr vim vimx
-else
-    abbr vi vim
-end
+abbr vi vimx
+abbr vim vimx
 
 abbr q exit
 abbr :q exit
