@@ -2,6 +2,14 @@ function fish_prompt
     set -l last_status $status    # must be FIRST
     set -l duration $CMD_DURATION # capture early
 
+    if set -q CONTAINER_ID
+        echo -n "("$CONTAINER_ID") "
+    end
+
+    if set -q CONDA_DEFAULT_ENV
+        echo -n "("$CONDA_DEFAULT_ENV") "
+    end
+
     if set -q _PROMPT_SHOWN
         echo -n (set_color brblack)(date +%H:%M:%S)(set_color normal)
 
@@ -17,16 +25,6 @@ function fish_prompt
         echo ""
     else
         set -g _PROMPT_SHOWN 1
-    end
-
-    if set -q CONTAINER_ID
-        echo -n "("$CONTAINER_ID") "
-    end
-
-    if set -q VIRTUAL_ENV
-        echo -n "("(basename $VIRTUAL_ENV)") "
-    else if set -q CONDA_DEFAULT_ENV
-        echo -n "("$CONDA_DEFAULT_ENV") "
     end
 
     if test "$HOSTNAME" = "toolbx"
